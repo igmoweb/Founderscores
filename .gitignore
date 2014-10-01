@@ -1,0 +1,6 @@
+*
+!/bower_components/*
+!bower.json
+!config.rb
+!gulpfile.js
+!.gitignore
