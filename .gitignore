@@ -1,5 +1,5 @@
 *
-!/scss/*
+!/scss
 !bower.json
 !config.rb
 !gulpfile.js
