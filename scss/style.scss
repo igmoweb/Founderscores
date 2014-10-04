@@ -84,3 +84,23 @@ and Blueprint http://www.blueprintcss.org/
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+body {
+	position:static;
+}
+
+#page {
+	overflow:hidden;
+}
+
+.widget-title {
+	font-size: rem-calc( 20 );
+}
+
+#masthead {
+	margin-bottom: 40px;
+}
+
+input[type="submit"] {
+	@include button;
+}

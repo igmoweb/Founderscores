@@ -1,5 +1,7 @@
 var gulp = require('gulp')
-    replace = require('gulp-replace');
+    replace = require('gulp-replace')
+    clean = require('gulp-clean')
+    insert = require('gulp-insert');
 
 gulp.task( 'default', function() {
 });
@@ -41,10 +43,6 @@ gulp.task( 'install', function() {
 	gulp.src( _s_template_files )
 		.pipe( gulp.dest( '.' ) );
 
-	gulp.src( [ 'bower_components/_s/header.php' ] )
-		.pipe( replace( 'class="site-header', 'class="site-header row' ) )
-		.pipe( replace( 'class="site-content', 'class="site-content row' ) )
-		.pipe( gulp.dest( '.' ) );
 
 	gulp.src( [ 'bower_components/_s/footer.php' ] )
 		.pipe( replace( 'class="site-footer', 'class="site-footer row' ) )
@@ -120,7 +118,17 @@ gulp.task( 'install', function() {
 	];
 
 	gulp.src( _s_sass_files )
-		.pipe( gulp.dest( 'scss/_s' ) );		
+		.pipe( gulp.dest( 'scss/_s' ) );
 
+	gulp.src( ['foundation.php'] )
+		.pipe( clean() )
+		.pipe( gulp.dest( 'inc' ) );		
+
+	gulp.src( ['app.js'] )
+		.pipe( clean() )
+		.pipe( gulp.dest( 'js' ) );	
+
+	gulp.src( ['functions.php'] )	
+		.pipe( insert.append( "HHHH" ) );
 });
 

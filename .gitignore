@@ -1,6 +1,9 @@
-*
-!/scss
+/*
+!/scss/style.css
 !bower.json
 !config.rb
 !gulpfile.js
 !.gitignore
+!header.php
+!foundation.php
+!app.js
