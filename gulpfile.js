@@ -41,10 +41,6 @@ gulp.task( 'install', function() {
 	gulp.src( _s_template_files )
 		.pipe( gulp.dest( '.' ) );
 
-	gulp.src( [ 'bower_components/_s/header.php' ] )
-		.pipe( replace( 'class="site-header', 'class="site-header row' ) )
-		.pipe( replace( 'class="site-content', 'class="site-content row' ) )
-		.pipe( gulp.dest( '.' ) );
 
 	gulp.src( [ 'bower_components/_s/footer.php' ] )
 		.pipe( replace( 'class="site-footer', 'class="site-footer row' ) )
