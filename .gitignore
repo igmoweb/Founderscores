@@ -5,5 +5,8 @@
 !gulpfile.js
 !.gitignore
 !.header.php
-!inc/foundation.php
-!js/app.js
+
+js/*
+inc/*
+!/inc/foundation.php
+!/js/app.js
