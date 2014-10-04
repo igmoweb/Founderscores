@@ -4,9 +4,6 @@
 !config.rb
 !gulpfile.js
 !.gitignore
-!.header.php
-
-js/*
-inc/*
-!/inc/foundation.php
-!/js/app.js
+!header.php
+!foundation.php
+!app.js
